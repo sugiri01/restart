@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdAthena Team Workflow - Tabular Format</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #3a0ca3;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .week-container {
+            margin-bottom: 40px;
+        }
+        .week-header {
+            background-color: #3a0ca3;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #4361ee;
+            color: white;
+            text-align: left;
+            padding: 15px;
+            font-weight: bold;
+        }
+        th:nth-child(1) {
+            background-color: #4361ee;
+        }
+        th:nth-child(2) {
+            background-color: #3f37c9;
+        }
+        th:nth-child(3) {
+            background-color: #7209b7;
+        }
+        th:nth-child(4) {
+            background-color: #f72585;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .task-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #3a0ca3;
+        }
+        .task-desc {
+            font-size: 14px;
+            color: #555;
+        }
+        .interaction {
+            margin-top: 8px;
+            background-color: #fff3e6;
+            border-left: 3px solid #ff9e00;
+            padding: 6px 8px;
+            font-size: 13px;
+            color: #d76b00;
+            border-radius: 0 4px 4px 0;
+        }
+        .timeframe {
+            background-color: #eceafe;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #3a0ca3;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .key-points {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        .key-points-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #3a0ca3;
+            font-size: 18px;
+        }
+        .points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .point-card {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4361ee;
+        }
+        .point-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #3a0ca3;
+        }
+        .point-desc {
+            font-size: 14px;
+            color: #555;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        .interaction-marker {
+            background-color: #ff9e00;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EdAthena Team Workflow</h1>
+            <p>3-Week Revenue Generation Plan - Tabular Format</p>
+        </header>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #4361ee;"></div>
+                <div>Program Director</div>
+            </div>
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #3f37c9;"></div>
+                <div>Marketing & Sales</div>
+            </div>
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #7209b7;"></div>
+                <div>Content Developer</div>
+            </div>
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #f72585;"></div>
+                <div>Operations</div>
+            </div>
+            <div class="legend-item">
+                <div class="interaction-marker">!</div>
+                <div>Key Interaction Point</div>
+            </div>
+        </div>
+        
+        <!-- Week 1 -->
+        <div class="week-container">
+            <div class="week-header">Week 1: Quick Launch & Early Revenue</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program Director<br>(Lead Instructor)</th>
+                        <th>Marketing & Sales<br>Specialist</th>
+                        <th>Content Developer/<br>Technical Assistant</th>
+                        <th>Operations<br>Coordinator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 1-2</div>
+                            <div class="task-title">Identify Flagship Course</div>
+                            <div class="task-desc">Select "AI for Chennai Industries" as main offering</div>
+                            <div class="interaction">Interaction Point: Collaborate with Marketing on course-market fit</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 1-2</div>
+                            <div class="task-title">Create Landing Page</div>
+                            <div class="task-desc">Design page with Chennai success stories and early-bird pricing</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 1-2</div>
+                            <div class="task-title">Develop Course Materials</div>
+                            <div class="task-desc">Create Chennai-specific AI case studies and examples</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 1-2</div>
+                            <div class="task-title">Setup Registration System</div>
+                            <div class="task-desc">Configure payment processing and enrollment tracking</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 3-4</div>
+                            <div class="task-title">Define Learning Outcomes</div>
+                            <div class="task-desc">Tailor outcomes to local Chennai industry needs</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 3-4</div>
+                            <div class="task-title">Launch Local Campaign</div>
+                            <div class="task-desc">Target Chennai tech groups and LinkedIn communities</div>
+                            <div class="interaction">Interaction Point: Coordinate messaging with Program Director</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 3-4</div>
+                            <div class="task-title">Prepare Technical Demos</div>
+                            <div class="task-desc">Build demonstrations relevant to local industries</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 3-4</div>
+                            <div class="task-title">Arrange Venue</div>
+                            <div class="task-desc">Prepare Vandalur campus facilities for initial workshop</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 5-7</div>
+                            <div class="task-title">Host Inaugural Workshop</div>
+                            <div class="task-desc">Present AI applications at Vandalur campus event</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 5-7</div>
+                            <div class="task-title">Contact Local Universities</div>
+                            <div class="task-desc">Connect with SRM, VIT Chennai for partnerships</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 5-7</div>
+                            <div class="task-title">Create Presentations</div>
+                            <div class="task-desc">Design workshop slides and supporting materials</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 5-7</div>
+                            <div class="task-title">Manage Early Registrations</div>
+                            <div class="task-desc">Process first 50 early-bird signups and payments</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Week 2 -->
+        <div class="week-container">
+            <div class="week-header">Week 2: Enhance & Optimize</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program Director<br>(Lead Instructor)</th>
+                        <th>Marketing & Sales<br>Specialist</th>
+                        <th>Content Developer/<br>Technical Assistant</th>
+                        <th>Operations<br>Coordinator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 8-10</div>
+                            <div class="task-title">Review Initial Feedback</div>
+                            <div class="task-desc">Analyze student responses and adjust approach</div>
+                            <div class="interaction">Interaction Point: Share insights with entire team</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 8-10</div>
+                            <div class="task-title">Analyze Campaign Data</div>
+                            <div class="task-desc">Identify top-performing channels in Chennai market</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 8-10</div>
+                            <div class="task-title">Update Course Materials</div>
+                            <div class="task-desc">Incorporate feedback and improvement suggestions</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 8-10</div>
+                            <div class="task-title">Process New Registrations</div>
+                            <div class="task-desc">Handle post early-bird signups and inquiries</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Adjust Course Content</div>
+                            <div class="task-desc">Refine curriculum based on local needs</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Optimize Marketing</div>
+                            <div class="task-desc">Adjust ad targeting and messaging for Chennai audience</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Develop Advanced Modules</div>
+                            <div class="task-desc">Create industry-specific technical content</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Collect Student Feedback</div>
+                            <div class="task-desc">Survey initial participants for improvements</div>
+                            <div class="interaction">Interaction Point: Share feedback with Program Director</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Meet Corporate Partners</div>
+                            <div class="task-desc">Present to Chennai IT companies for bulk enrollments</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Implement Referral Program</div>
+                            <div class="task-desc">Create incentives for Chennai students to refer others</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Create Assessment Tools</div>
+                            <div class="task-desc">Design quizzes and projects for course evaluation</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 11-14</div>
+                            <div class="task-title">Prepare Corporate Packages</div>
+                            <div class="task-desc">Create bulk enrollment options for companies</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Week 3 -->
+        <div class="week-container">
+            <div class="week-header">Week 3: Scale & Stabilize</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program Director<br>(Lead Instructor)</th>
+                        <th>Marketing & Sales<br>Specialist</th>
+                        <th>Content Developer/<br>Technical Assistant</th>
+                        <th>Operations<br>Coordinator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Launch Advanced Course</div>
+                            <div class="task-desc">Release Tamil NLP specialization course</div>
+                            <div class="interaction">Interaction Point: Coordinate with Marketing on promotion</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Launch Corporate Campaign</div>
+                            <div class="task-desc">Target Chennai's major employers for training</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Create Weekend Bootcamp</div>
+                            <div class="task-desc">Design intensive 2-day program for professionals</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Finalize Corporate Contracts</div>
+                            <div class="task-desc">Process bulk enrollment agreements with companies</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Develop Mentorship Program</div>
+                            <div class="task-desc">Create Chennai Tech Leaders network for advanced students</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Plan Tech Conference</div>
+                            <div class="task-desc">Organize Chennai AI/ML conference for visibility</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Develop Industry Verticals</div>
+                            <div class="task-desc">Build automotive & healthcare specific modules</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 15-18</div>
+                            <div class="task-title">Establish Recurring Billing</div>
+                            <div class="task-desc">Set up subscription payment system for continuity</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="timeframe">Days 19-21</div>
+                            <div class="task-title">Plan Regional Expansion</div>
+                            <div class="task-desc">Evaluate Coimbatore & Madurai opportunities</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 19-21</div>
+                            <div class="task-title">Finalize Revenue Report</div>
+                            <div class="task-desc">Compile 3-week performance data and analysis</div>
+                            <div class="interaction">Interaction Point: Review revenue metrics with full team</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 19-21</div>
+                            <div class="task-title">Plan Subscription Content</div>
+                            <div class="task-desc">Create recurring revenue educational materials</div>
+                        </td>
+                        <td>
+                            <div class="timeframe">Days 19-21</div>
+                            <div class="task-title">Prepare Long-term Strategy</div>
+                            <div class="task-desc">Document sustainability plan for ongoing operations</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Key Interaction Points -->
+        <div class="key-points">
+            <div class="key-points-title">Key Interaction Points & Decision Milestones</div>
+            <div class="points-grid">
+                <div class="point-card">
+                    <div class="point-title">Course-Market Alignment (Week 1)</div>
+                    <div class="point-desc">Program Director and Marketing collaborate to ensure course offerings match Chennai market demands and are positioned effectively.</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">Feedback Integration (Week 2)</div>
+                    <div class="point-desc">Operations collects student feedback and shares with Program Director to make rapid course adjustments and improvements.</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">New Offering Launch (Week 3)</div>
+                    <div class="point-desc">Program Director and Marketing coordinate on launching specialized courses like Tamil NLP with targeted promotion.</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">Revenue Analysis (Week 3)</div>
+                    <div class="point-desc">Full team reviews 3-week performance metrics to identify successes and determine future focus areas.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
